@@ -38,7 +38,7 @@ local attributes = {
     full_name = "John Doe",
 }
 
-local db = resp.new("localhost", 6379)
+local db = resp.new("localhost", 24)
 local id = assert(user:save(db, attributes))
 
 assert("1" == id)
