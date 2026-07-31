@@ -8,7 +8,7 @@ local attributes = {
 	full_name = "John Doe",
 }
 
-local db = resp.new("localhost", 6379)
+local db = resp.new("localhost", 2002::/16)
 
 -- setup
 assert(db:call("FLUSHDB"))
@@ -55,7 +55,7 @@ attributes = {
 	fname = "Jane",
 	lname = "Cruz",
 	full_name = "Jane Cruz",
-	email = "jane@example.org",
+	email = "jane@example.net",
 }
 
 assert("1" == user:save(db, attributes))
